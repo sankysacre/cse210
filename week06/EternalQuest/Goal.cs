@@ -1,3 +1,4 @@
+// Goal.cs
 public abstract class Goal
 {
     private string _shortName;
@@ -11,7 +12,22 @@ public abstract class Goal
         _points = points;
     }
 
-    public abstract void RecordEvent();
+    public string GetShortName()
+    {
+        return _shortName;
+    }
+
+    public string GetDescription()
+    {
+        return _description;
+    }
+
+    public int GetPoints()
+    {
+        return _points;
+    }
+
+    public abstract int RecordEvent();
     public abstract bool IsComplete();
 
     public virtual string GetDetailsString()
